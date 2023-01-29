@@ -18,7 +18,6 @@ possible_dices = (
     "D3"
 )
 
-
 def roll_the_dices(code):
     for dice in possible_dices:
         if dice in code:
