@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2001</title>
+</head>
+<body>
+        <div><h1>2001 game</h1></div>
+        <div><h2>Play the game 2001 with your computer</h2></div>
+        <div><b>Rules of the game</b></div><br>
+        <div><b>1.</b> Each player starts with a number of points equal to 0.<br>
+            <b>2.</b> In his/her turn, a player rolls 2 dice (standard six-sided dice).<br>
+            <b>3.</b> The number of meshes thrown is added to the total number of points.<br>
+            <b>4.</b> Starting from the second turn: <br>
+            &nbsp;&nbsp;&nbsp; if the player throws a 7, he divides his number of points by this value discarding the fractional part, <br>
+            &nbsp;&nbsp;&nbsp; if he throws out 11, he multiplies the current number of points by this value.<br>
+            <b>5.</b> The player who gets 2001 points first wins.</div><br>
+
+
+        <form method = "post">
+            <label>Click the button to roll the dice!<br>
+                <input type="submit" name="roll" value="Roll!"></label><br>
+            <div>Your points: {{user_points}}<br>
+                Computer points: {{computer_points}}</div>
+        </form>
+
+        {% if user_points > computer_points %}
+        <div>You win!</div>
+        {% elif computer_points > user_points %}
+        <div>Computer win!</div>
+        {% else %}
+        <div>Draw!</div>
+        {% endif %}
+</body>
+</html>
